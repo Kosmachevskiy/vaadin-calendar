@@ -1,0 +1,96 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="day-compoment.html">
+
+
+<dom-module id="calendar-component">
+    <template>
+        <style>
+            .calendar-container {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                /*justify-content: space-between;*/
+            }
+
+            .week {
+                display: flex;
+                min-height: 20%;
+            }
+
+            day-compoment {
+                box-sizing: border-box;
+                border: grey 1px solid;
+                width: 14.28%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .blank-day {
+                border: none;
+            }
+        </style>
+        <div class="calendar-container">
+            <div class="week">
+                <day-compoment class="blank-day"></day-compoment>
+                <day-compoment class="blank-day"></day-compoment>
+                <day-compoment class="blank-day"></day-compoment>
+                <day-compoment class="blank-day"></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+            </div>
+            <div class="week">
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+            </div>
+            <div class="week">
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+            </div>
+            <div class="week">
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+            </div>
+            <div class="week">
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment></day-compoment>
+                <day-compoment class="blank-day"></day-compoment>
+                <day-compoment class="blank-day"></day-compoment>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        class CalendarComponent extends Polymer.Element {
+            static get is() {
+                return 'calendar-component';
+            }
+
+            static get properties() {
+                return {
+// Declare your properties here.
+                };
+            }
+        }
+
+        customElements.define(CalendarComponent.is, CalendarComponent);
+    </script>
+</dom-module>

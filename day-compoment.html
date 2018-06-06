@@ -1,0 +1,41 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="day-compoment">
+    <template>
+        <style>
+            .day-container {
+                display: flex;
+                flex-direction: column;
+            }
+            .day-header{
+                display: flex;
+                font-size: medium;
+                justify-content: space-between;
+                padding: 0 4px;
+                padding-top: 3px;
+            }
+        </style>
+        <div class="day-container">
+            <div class="day-header">
+                <div id="day-of-week" class="day-of-week">Пн</div>
+                <div id="number" class="day-number">69</div>
+            </div>
+            <div id="tasks" class="task-container"></div>
+        </div>
+    </template>
+
+    <script>
+        class DayCompoment extends Polymer.Element {
+            static get is() {
+                return 'day-compoment';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(DayCompoment.is, DayCompoment);
+    </script>
+</dom-module>
