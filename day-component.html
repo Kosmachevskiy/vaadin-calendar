@@ -1,6 +1,6 @@
-<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="day-compoment">
+<dom-module id="day-component">
     <template>
         <style>
             .day-container {
@@ -17,17 +17,20 @@
         </style>
         <div class="day-container">
             <div class="day-header">
-                <div id="day-of-week" class="day-of-week">Пн</div>
-                <div id="number" class="day-number">69</div>
+                <div id="day-of-week" class="day-of-week"></div>
+                <div id="number" class="day-number"></div>
             </div>
-            <div id="tasks" class="task-container"></div>
+            <div class="task-container">
+                <ul id="tasks">
+                </ul>
+            </div>
         </div>
     </template>
 
     <script>
         class DayCompoment extends Polymer.Element {
             static get is() {
-                return 'day-compoment';
+                return 'day-component';
             }
 
             static get properties() {
