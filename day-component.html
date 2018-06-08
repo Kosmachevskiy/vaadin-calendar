@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
+
 <dom-module id="day-component">
     <template>
         <style>
@@ -9,7 +10,7 @@
             }
             .day-header{
                 display: flex;
-                font-size: medium;
+                font-size: small;
                 justify-content: space-between;
                 padding: 0 4px;
                 padding-top: 3px;
@@ -20,6 +21,10 @@
                 padding-left: 20px;
                 margin: 6px 0;
                 font-size: small;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                line-height: 1;
             }
         </style>
         <div class="day-container">
@@ -29,6 +34,7 @@
             </div>
             <div class="task-container">
                 <ul id="tasks">
+                    <!--<li>Ttttttttttttttttttttttttttttttttttttt]</li>-->
                 </ul>
             </div>
         </div>
